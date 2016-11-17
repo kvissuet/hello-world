@@ -1,0 +1,11 @@
+L1=[15,12,8,8,7,7,7,6,5,3]
+L2=[10,25,17,11,13,17,20,13,9,15]
+LProd=[]
+for x in range(10):
+    LProd.append(L1[x]*L2[x])
+def Lsum(L,p):
+    s=0
+    for x in L:
+        s+=x**p
+    return(s)
+x=(Lsum(LProd,1)-(Lsum(L1,1)*Lsum(L2,1))/10)/((Lsum(L1,2)-(Lsum(L1,1)**2)/10)**(1/2)*((Lsum(L2,2)-(Lsum(L2,1)**2)/10))**(1/2))
